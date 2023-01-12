@@ -8,6 +8,7 @@ import {
 } from "@react-google-maps/api";
 
 import { MdControlPoint } from "react-icons/md";
+import { GrSubtractCircle } from "react-icons/gr";
 import { useRef, useState, useEffect } from "react";
 
 import Map from "./map";
@@ -42,6 +43,12 @@ function App() {
     return <SkeletonText />;
   }
 
+
+   const DeleteStop = () => {
+    const newItems = [...Allitem];
+    newItems.pop();
+    setAllItem(newItems);
+   }
   const CalculateLatLag = async () => {
     let arr = [];
     let demoarry = [];
@@ -126,6 +133,11 @@ function App() {
                 <MdControlPoint className="addItem" />{" "}
                 <span>Add another stop </span>
               </button>
+              { Allitem.length ?< button className="btn-style" onClick={DeleteStop}>
+                {" "}
+                <GrSubtractCircle className="addItem" />{" "}
+                <span>Delete stop </span>
+              </button>:"" }
               Destination
               <Input
                 type="text"

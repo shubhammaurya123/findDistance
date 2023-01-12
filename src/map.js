@@ -61,11 +61,11 @@ const Map = (props) => {
           let time = 0;
           for(let i  = 0; i < result.routes[0].legs.length; i++ ) {
              sum += result.routes[0].legs[i].distance.value;
-             time += result.routes[0].legs[i].duration.value;
+            
           }
 
           setDistance(sum/1000)
-          setDuration(time/60)
+         
         } else {
           console.error(`error fetching directions ${result}`);
         }

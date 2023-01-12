@@ -141,18 +141,14 @@ function App() {
                     {distance ? <> {distance} Km</> : ""}{" "}
                   </span>
                 </div>
-                <div className="Item-style">
-                  <span>Duration</span>
-                  <span className="Item">{duration}</span>
-                </div>
+                
               </div>
               {istrue && (
                 <div className="text-Item">
                   The distance between{" "}
                   <span className="highlight"> {orgine} </span> to
                   <span className="highlight">{end}</span> the selected route is{" "}
-                  <span className="highlight"> {distance} km </span> and
-                  duration is <span className="highlight"> {duration} </span>.
+                  <span className="highlight"> {distance} Km.</span> 
                 </div>
               )}
             </div>
